@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadget Store - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🛍️ TechGadget</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle">🌙 Dark</button>
+                <button id="cartBtn" class="cart-btn">🛒 Cart (<span id="cartCount">0</span>)</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to TechGadget Store</h1>
+            <p>Discover the latest in technology and gadgets</p>
+            <button id="shopNow" class="cta-button">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Interactive Features Section -->
+    <section class="interactive-section">
+        <div class="container">
+            <!-- Part 1: Event Handling -->
+            <div class="feature-card">
+                <h2>🎉 Interactive Demo</h2>
+                <div class="event-demo">
+                    <button id="clickDemo" class="demo-btn">Click Me!</button>
+                    <button id="hoverDemo" class="demo-btn">Hover Over Me</button>
+                    <input type="text" id="keyboardDemo" placeholder="Type something...">
+                    <div id="eventOutput" class="output-box">Event output will appear here...</div>
+                </div>
+            </div>
+
+            <!-- Part 2: Interactive Elements -->
+            <div class="interactive-grid">
+                <!-- Feature 1: Dark/Light Mode Toggle -->
+                <div class="feature-card">
+                    <h3>🎮 Theme Switcher</h3>
+                    <p>Toggle between light and dark mode</p>
+                    <button id="themeSwitch" class="feature-btn">Toggle Theme</button>
+                </div>
+
+                <!-- Feature 2: Counter Game -->
+                <div class="feature-card">
+                    <h3>🎮 Click Counter Game</h3>
+                    <p>How fast can you click?</p>
+                    <div class="counter-game">
+                        <span id="counterValue">0</span>
+                        <button id="incrementBtn" class="game-btn">Click Me!</button>
+                        <button id="resetCounter" class="game-btn">Reset</button>
+                    </div>
+                </div>
+
+                <!-- Feature 3: FAQ Section -->
+                <div class="feature-card">
+                    <h3>🎮 FAQ Section</h3>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <button class="faq-question">What is your return policy? ▶</button>
+                            <div class="faq-answer">
+                                <p>We offer 30-day returns on all products in original condition.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Do you offer free shipping? ▶</button>
+                            <div class="faq-answer">
+                                <p>Yes! Free shipping on orders over $50.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">How long does delivery take? ▶</button>
+                            <div class="faq-answer">
+                                <p>Standard delivery takes 3-5 business days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Product Tabs -->
+                <div class="feature-card">
+                    <h3>🎮 Product Categories</h3>
+                    <div class="tab-container">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="phones">Phones</button>
+                            <button class="tab-btn" data-tab="laptops">Laptops</button>
+                            <button class="tab-btn" data-tab="accessories">Accessories</button>
+                        </div>
+                        <div class="tab-content">
+                            <div id="phones" class="tab-pane active">
+                                <p>Latest smartphones and mobile devices</p>
+                            </div>
+                            <div id="laptops" class="tab-pane">
+                                <p>Powerful laptops for work and gaming</p>
+                            </div>
+                            <div id="accessories" class="tab-pane">
+                                <p>Cases, chargers, and other accessories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 3: Form Validation -->
+            <div class="feature-card">
+                <h2>📋✅ Contact Form</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" rows="4"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div id="formSuccess" class="success-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TechGadget Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
